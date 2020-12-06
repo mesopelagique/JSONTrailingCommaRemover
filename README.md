@@ -12,3 +12,30 @@ This method use an offline we area and javascript to remove the trailing comma, 
 $fixed:=JSONTrailingCommaRemover($yourJSONString)
 $object:=JSON Parse($fixed)
 ````
+
+
+## Example of parsable json after fixing it
+
+### object trailing comma
+
+```json
+{"foo" : 1, }
+```
+
+will be transform to
+
+```json
+{"foo" : 1 }
+```
+
+### collection trailing comma
+
+```json
+[1, 2, 3, 4, ]
+```
+
+will be transform to
+
+```json
+[1, 2, 3, 4 ]
+```
